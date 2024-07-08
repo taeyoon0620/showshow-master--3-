@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes, Link, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Link, Navigate, useLocation } from 'react-router-dom';
 import { Container, Grid, Box, Button } from '@mui/material';
 import Header from './components/Header';
 import SideMenu from './components/SideMenu';
@@ -28,7 +28,7 @@ const App = () => {
     };
 
     return (
-        <Router>
+        <Router basename={process.env.PUBLIC_URL}>
             <div className={`App ${darkMode ? 'dark-mode' : ''}`}>
                 <Routes>
                     <Route path="/" element={<MainLayout darkMode={darkMode} toggleDarkMode={toggleDarkMode} />} />
