@@ -7,7 +7,7 @@ import busking from '../assets/busking.PNG';  // 상대 경로로 이미지를 i
 
 const MainContent = () => (
     <Box>
-        <Typography variant="h5">시작하는 공연 정보</Typography>
+        <Typography variant="h5" style={{ fontFamily: 'Malgun Gothic', fontSize: '35px' }}>곧 시작하는 공연 정보</Typography>
         <Grid container spacing={2}>
             <Grid item xs={6}>
                 <CountdownTimer />

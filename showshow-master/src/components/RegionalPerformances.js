@@ -10,7 +10,7 @@ const RegionalPerformances = () => {
 
     return (
         <Box mt={4}>
-            <Typography variant="h5">지역별 공연 정보</Typography>
+            <Typography variant="h5" style={{ fontFamily: 'Malgun Gothic', fontSize: '45px' }} >지역별 공연 정보</Typography>
             <Grid container spacing={1}>
                 {performances.map((performance, index) => (
                     <Grid item xs={12} sm={12} key={index}>
@@ -24,7 +24,6 @@ const RegionalPerformances = () => {
                                 objectFit: 'cover',
                             }}
                         />
-                        <Typography>{performance.title}</Typography>
                     </Grid>
                 ))}
             </Grid>

@@ -15,7 +15,9 @@ const RecentPerformances = () => {
 
     return (
         <Box mt={4}>
-            <Typography variant="h5"style={{ fontFamily: 'Malgun Gothic', fontSize: '45px', }}>최근 인기 공연</Typography>
+            <Typography variant="h5" style={{ fontFamily: 'Malgun Gothic', fontSize: '45px' }}>
+                최근 인기 공연
+            </Typography>
             <Grid container spacing={2}>
                 {performances.map((performance, index) => (
                     <Grid item xs={12} sm={4} key={index}>
@@ -27,9 +29,10 @@ const RecentPerformances = () => {
                                 width: '100%',
                                 height: imageHeight,
                                 objectFit: 'cover', // 비율을 유지하면서 크기를 맞춤
+                                mb: 3, // 이미지와 이미지 사이의 간격을 위해 추가된 마진
                             }}
                         />
-                        <Typography>{performance.title}</Typography>
+                        <Typography align="center" style={{ marginTop: '30px' }}>{performance.title}</Typography>
                     </Grid>
                 ))}
             </Grid>
